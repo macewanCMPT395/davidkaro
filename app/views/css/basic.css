@@ -1,0 +1,43 @@
+body {
+    font-family: Arial;
+    font-size: 130%;
+    color: #ffffff;
+    background-color: #54632C;
+    margin: 0;
+}
+
+#title {
+    height: 60px;
+    text-align: centre:
+    padding-left: 40px;
+    background: #000000;
+    font-weight: bold;
+    font-color: #ffffff;
+}
+
+#nav {
+    height: 45px;
+    background: #000000;
+}
+#nav ul {
+    list-style: none;
+}
+
+#nav ul li {
+    float: left;
+    padding: 0 15px;
+    margin 8px 0;
+    boarder-left: 1px solid #ffffff;
+    color: #781d2e;
+}
+
+#nav ul li a, #nav ul li a:link, #nav ul li a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#nav ul li a.selected {
+    color: #781d2e;
+    font-weight: bold;
+}
+
