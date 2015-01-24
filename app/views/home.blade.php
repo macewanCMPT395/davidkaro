@@ -1,38 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-<link rel="stylesheet" type="text/css" href="css/main.css">
-   
-</head>
+@extends('layouts.default')
 
-<body> 
-<div class="outer">
-<div class="middle">
-
-<div class="bar"></div>
-    
-<div id="title">
-  Bushels of Llamas
-</div>
-    
-<div class="bar"></div>
-
-<div id="nav">
-    <ul>
+@section('items')
         <li>
-            {{ link_to("/signIn", "Sign In") }}
+            <div id="link">{{ link_to("/signIn", "Sign In") }}</div>
         </li>
         
         <li>
-            {{ link_to("/signIn", "New User") }}
+            <div id="link">{{ link_to("/users/create", "New User") }}</div>
         </li>
         
-    </ul>
-</div>
-
-</div>
-</div>
-
-</body>
-
-</html>
+@stop

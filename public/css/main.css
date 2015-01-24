@@ -9,7 +9,7 @@ body {
 }
 
 .outer {
-    margins: 0px;
+    margin-top: 20%;
     display: table;
     position: absolute;
     height: 100%;
@@ -18,7 +18,6 @@ body {
 
 .middle {
     display: table-cell;
-    vertical-align: middle;
     text-align: center;
 }
 
@@ -27,21 +26,68 @@ body {
     background: #D1A3FF; #laurel
 }
 
+a {
+    text-decoration:none;
+}
+
+a:active {
+    color: #E3C8FF; #blissful
+}
+
 #title {
     color: #685280; #aubergine
-    height: 500%;
+    height: 100%;
     font-size: 500%;
     text-align: centre:
     background: #ffffff; #white
     font-color: #685280; #aubergine
+    text-decoration: none;
+}
+
+#link {
+    font-size: 100%;
+}
+
+#item {
+    font-size: 500%;
+}
+
+#textareasOut {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: table;
+    
+}
+
+#textareasIn {
+    margin-top: 9%;
+    position: relative;
+    display: block;
+    vertical-align: centre;
+    text-align: centre;
+}
+
+#form {
+    height: inherit;
+    width: inherit;
+    font-size: 100%;
+    color: #E3C8FF; #blissful
+}
+
+#form ul {
+    border: 5px solid #D1A3FF; #laurel
+}
+
+#form ul li{
+    height: 100%;
 }
 
 #nav {
-    height: %500px;
     background: #ffffff; #white
     font-color: #660066; #aubergine
     text-decoration: none;
-    display: inline;
+    display: inline-block;
 }
 
 #nav ul {
@@ -54,31 +100,38 @@ body {
 
 #nav ul li {
     float: left;
-    font-size: 500%;
     padding: 5px;
     text-decoration: none;
-    border: 5%px solid #ffffff; #white
-    display: inline-block;
+    display: table;
+    color: #685280; #aubergine
 }
 
 #nav ul li a {
     color: #685280; #aubergine
-    font-weight: bold;
+    font-size: 500%;
     text-decoration: none;
     border: 5px solid #E3C8FF; #blissful
 }
 
 #nav ul li a:link {
+    font-size: 500%;
     color: #685280; #aubergine
-    font-weight: bold;
     text-decoration: none;
     border: 5px solid #E3C8FF; #blissful
 }
 
 #nav ul li a:hover {
+    font-size: 500%;
     color: #685280; #aubergine
-    font-weight: bold;
     text-decoration: none;
     border: 5px solid #D1A3FF; #laurel
 }
+
+#nav ul li a:active {
+    font-size: 500%;
+    color: #E3C8FF; #blissful
+    border: 5px solid #D1A3FF; #laurel
+}
+
+
 

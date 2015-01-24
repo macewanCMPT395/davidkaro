@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="css/main.css">
+    {{ HTML::style('css/main.css') }}
    
 </head>
 
@@ -12,16 +12,14 @@
 <div class="bar"></div>
     
 <div id="title">
-  Bushels of Llamas
+  {{ link_to("/", "Bushels of Llamas") }}
 </div>
     
 <div class="bar"></div>
 
 <div id="nav">
     <ul>
-        <li>
-            {{ link_to("/signIn", "Prove Your Identity") }}
-        </li>
+        @yield('items')
         
     </ul>
 </div>
