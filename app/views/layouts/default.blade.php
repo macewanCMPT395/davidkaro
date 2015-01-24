@@ -12,7 +12,7 @@
 <div class="bar"></div>
     
 <div id="title">
-  {{ link_to("/", "Bushels of Llamas") }}
+  {{ link_to("/", "A Fever of Llamas") }}
 </div>
     
 <div class="bar"></div>
