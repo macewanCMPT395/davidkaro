@@ -1,0 +1,84 @@
+body {
+    font-family: Helvetica;
+    font-size: 100%;
+    background-color: #ffffff; #white
+    width: 800px;
+    height 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outer {
+    margins: 0px;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bar {
+    height: 15px;
+    background: #D1A3FF; #laurel
+}
+
+#title {
+    color: #685280; #aubergine
+    height: 500%;
+    font-size: 500%;
+    text-align: centre:
+    background: #ffffff; #white
+    font-color: #685280; #aubergine
+}
+
+#nav {
+    height: %500px;
+    background: #ffffff; #white
+    font-color: #660066; #aubergine
+    text-decoration: none;
+    display: inline;
+}
+
+#nav ul {
+    list-style: none;
+    font-color: #685280; #aubergine
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+#nav ul li {
+    float: left;
+    font-size: 500%;
+    padding: 5px;
+    text-decoration: none;
+    border: 5%px solid #ffffff; #white
+    display: inline-block;
+}
+
+#nav ul li a {
+    color: #685280; #aubergine
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid #E3C8FF; #blissful
+}
+
+#nav ul li a:link {
+    color: #685280; #aubergine
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid #E3C8FF; #blissful
+}
+
+#nav ul li a:hover {
+    color: #685280; #aubergine
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid #D1A3FF; #laurel
+}
+
