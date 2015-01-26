@@ -4,7 +4,7 @@
         
 
         <li>
-        {{ Form::open() }}
+        {{ Form::open(['route' => 'users.store']) }}
         <div id="form">
             <ul>
                 <li>
@@ -14,11 +14,12 @@
                     <div id="textareasOut">
                     <div id="textareasIn">
                         {{ Form::label('username', 'Username: ') }}
-                        {{ Form::input('text','username') }}
+                        {{ Form::text('username') }}
                         <br>
                         {{ Form::label('password', 'Password: ') }}
-                        {{ Form::input('text','password') }}
+                        {{ Form::password('password') }}
                     </div>
+			{{ Form::submit('Make me a user!!!') }}
                     </div>
                 </li>
             </ul>

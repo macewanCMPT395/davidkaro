@@ -6,8 +6,8 @@ class PagesController extends BaseController {
 
 	public function home()
 	{
-		$name = 'Alpaca';
-		return View::make('home') -> with ('name', $name);
+		//$usrs = DB::table('Users')->get();
+		return View::make('home');
 	}
     
     public function signIn()
