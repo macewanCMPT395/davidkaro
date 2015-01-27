@@ -1,9 +1,9 @@
-@extends('layouts.default')
+@extends('layouts.main')
 
 @section('items')
 
         <li>
-        {{ Form::open() }}
+        {{ Form::open(['route' => 'validate']) }}
         <div id="form">
             <ul>
                 <li>
@@ -12,11 +12,13 @@
                 <li>
                     <div id="textareasOut">
                     <div id="textareasIn">
-                        {{ Form::label('username', 'Username: ') }}
-                        {{ Form::input('text','username') }}
+                        {{ Form::label('Username', 'Username: ') }}
+                        {{ Form::input('text','Username') }}
                         <br>
-                        {{ Form::label('password', 'Password: ') }}
-                        {{ Form::input('text','password') }}
+                        {{ Form::label('Password', 'Password: ') }}
+                        {{ Form::input('text','Password') }}
+                        <br>
+                        {{ Form::submit('Sign In') }}
                     </div>
                     </div>
                 </li>

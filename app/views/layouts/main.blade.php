@@ -11,9 +11,7 @@
 
 <div class="bar"></div>
     
-<div id="title">
-  {{ link_to("/", "A Fever of Llamas") }}
-</div>
+<div id="title"> &nbsp&nbsp{{ link_to("/", "A Fever of Llamas") }} </div>
     
 <div class="bar"></div>
 

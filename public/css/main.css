@@ -61,11 +61,11 @@ a:active {
 }
 
 #textareasIn {
-    margin-top: 9%;
+    margin-top: 5%;
     position: relative;
     display: block;
     vertical-align: centre;
-    text-align: centre;
+    text-align: right;
 }
 
 #form {
@@ -132,6 +132,3 @@ a:active {
     color: #E3C8FF; #blissful
     border: 5px solid #D1A3FF; #laurel
 }
-
-
-

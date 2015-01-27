@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.main')
 
 @section('items')
         <li>
@@ -6,7 +6,6 @@
         </li>
         
         <li>
-            <div id="link">{{ link_to("/users/create", "New User") }}</div>
+            <div id="link">{{ link_to("/users/create", "New") }}</div>
         </li>
-        
 @stop
