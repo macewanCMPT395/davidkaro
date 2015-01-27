@@ -34,7 +34,7 @@
                         {{ Form::text('password', $user->Password) }}
                         <br>
                         {{ Form::label('password', 'Gender: ') }}
-                        {{ Form::select('Gender',['Male', 'Female', 'TransLlama', 'NonGendered']) }}
+                        {{ Form::select('Gender',['Male', 'Female', 'TransLlama', 'NonGendered'], $user->Gender) }}
                     </div>
                     </div>
                 </li>
@@ -42,13 +42,13 @@
                     <div id="textareasOut">
                     <div id="textareasIn">
                         {{ Form::label('LookingFor', 'Looking For: ') }}
-                        {{ Form::select('LookingFor',['Male', 'Female', 'TransLlama', 'NonGendered']) }}
+                        {{ Form::select('LookingFor',['Male', 'Female', 'TransLlama', 'NonGendered'], $user->SexualOrientation) }}
                         <br>
                         {{ Form::label('FurColor', 'Fur Color: ') }}
                         {{ Form::text('FurColor', $user->FurColor) }}
                         <br>
                         {{ Form::label('CommitmentLevel', 'Commitment Level: ') }}
-                        {{ Form::select('CommitmentLevel',['Mild Eye Contact', 'Hoofing', 'Prancing', 'Elope to Peru']) }}
+                        {{ Form::select('CommitmentLevel',['Mild Eye Contact', 'Hoofing', 'Prancing', 'Elope to Peru'], $user->Type) }}
                     </div>
                     </div>
                 </li>

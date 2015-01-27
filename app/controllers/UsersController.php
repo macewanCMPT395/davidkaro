@@ -29,9 +29,19 @@ class UsersController extends BaseController {
         
         $username = $user->UserName;
         
-        Return Redirect::to("/users/{$username}");
+        return Redirect::to("/users/{$username}");
 	}  
     
+    public function validate()
+    {
+        $user = new User;
+        $user->UserName = Input::get('Username');
+        $user->Password = Hash::make(Input::get('Password'));
+        
+        $username = $user->UserName;
+        
+        return Redirect::to("/users/{$username}");
+    }
     
     public function show($username)
     {
@@ -40,10 +50,8 @@ class UsersController extends BaseController {
         
         $user = User::whereUsername($username)->first();
         
-        Return View::make('users.show', ['user' => $user]);
+        return View::make('users.show', ['user' => $user]);
     }
-    
-    
     
     public function edit($username)
     {
@@ -52,6 +60,6 @@ class UsersController extends BaseController {
         
         $user = User::whereUsername($username)->first();
         
-        Return View::make('users.edit', ['user' => $user]);
+        return View::make('users.edit', ['user' => $user]);
     }
 }

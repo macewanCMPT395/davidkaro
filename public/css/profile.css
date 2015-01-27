@@ -105,6 +105,7 @@ a:active {
 }
 
 .profile ul {
+    width:100%;
     list-style: none;
     text-decoration: none;
     display: inline-block;
@@ -129,7 +130,6 @@ rect.pic {
 }
 
 .user-info {
-    width:200%;
     margin-top: 0px;
     text-align: left;
 }
@@ -141,7 +141,7 @@ rect.pic {
 }
 
 .user-info ul li {
-    width: auto;
+    max-width: 100%;
     float: left;
     padding-right: 20px;
     background: #ffffff; #white

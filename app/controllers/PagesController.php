@@ -6,7 +6,6 @@ class PagesController extends BaseController {
 
 	public function home()
 	{
-		//$usrs = DB::table('Users')->get();
 		return View::make('home');
 	}
     
@@ -17,11 +16,11 @@ class PagesController extends BaseController {
     
     public function validate()
     {
-        $user = new User;
-        $user->UserName = Input::get('Username');
-        $user->Password = Hash::make(Input::get('Password'));
+        //$user = new User;
+        //$user->UserName = Input::get('Username');
+        //$user->Password = Hash::make(Input::get('Password'));
         
-        $username = $user->UserName;
+        //$username = $user->UserName;
         
         Return 1;
     }

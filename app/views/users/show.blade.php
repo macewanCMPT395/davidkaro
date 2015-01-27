@@ -22,6 +22,29 @@ $users = User::all();
 <div class="profile-list">
     @foreach ($users as $u)
     <div class="profile">
+        
+        <?php
+
+        $CommitmentLevel = "Nebulous";
+        if ($u->Type == "0") $CommitmentLevel = "Mild Eye Contact";
+        if ($u->Type == "1") $CommitmentLevel = "Hoofing";
+        if ($u->Type == "2") $CommitmentLevel = "Prancing";
+        if ($u->Type == "3") $CommitmentLevel = "Elope to Peru";
+
+        $Gender = "Nebulous";
+        if ($u->Gender == "0") $Gender = "Male";
+        if ($u->Gender == "1") $Gender = "Female";
+        if ($u->Gender == "2") $Gender = "TransLlama";
+        if ($u->Gender == "3") $Gender = "NonGendered";
+
+        $LookingFor = "A Far Away Shore";
+        if ($u->SexualOrientation == "0") $LookingFor = "Male";
+        if ($u->SexualOrientation == "1") $LookingFor = "Female";
+        if ($u->SexualOrientation == "2") $LookingFor = "TransLlama";
+        if ($u->SexualOrientation == "3") $LookingFor = "NonGendered";
+
+        ?>
+        
         <ul>
             <li>
                 <svg width="160" height="160">
@@ -33,13 +56,13 @@ $users = User::all();
                 <div class="user-info">
                     <ul>
                         <li>
-                            Gender: {{$u->Gender}} <br>
-                            Looking For: {{$u->SexualOrientation}} <br>
+                            Gender: {{$Gender}} <br>
+                            Looking For: {{$LookingFor}} <br>
                             
                         </li>
                         <li>
                             Fur Color: {{$u->FurColor}} <br>
-                            Commitment Level: {{$u->Interests}} <br>
+                            Commitment Level: {{$CommitmentLevel}} <br>
                         </li>
                         <li>
                             Interests: {{$u->Interests}} <br>

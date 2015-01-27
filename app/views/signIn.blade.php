@@ -3,7 +3,7 @@
 @section('items')
 
         <li>
-        {{ Form::open(['route' => 'validate']) }}
+        {{ Form::open(['route' => 'users.validate']) }}
         <div id="form">
             <ul>
                 <li>
