@@ -16,6 +16,10 @@ class UsersController extends BaseController {
 	public function store()
 	{
               //Create New User
+	if (DB::table('users')->where('UserName', Input::get('Username'))->pluck('name'))
+	{
+	return Redirect::to("/");
+	}
         $user = new User;
         $user->UserName = Input::get('Username');
         $user->Password = Hash::make(Input::get('Password'));
@@ -33,16 +37,13 @@ class UsersController extends BaseController {
     
     public function validate()
     {
-        $user = new User;
-        $user->UserName = Input::get('Username');
-        $user->Password = Input::get('Password');
-        
-        $username = $user->UserName;
-        if (Auth::attempt(Input::only('Username','Password')))
+        $username = Input::get('Username');
+        $password = Input::get('Password');
+        if (Auth::attempt(array('UserName' => $username, 'Password' => $password) ))
 	{
         return Redirect::to("/users/{$username}");
 	}
-	return Redirect::to("/users/{$username}");
+	return Redirect::to("/");
     }
     
     public function show($username)
@@ -64,9 +65,9 @@ class UsersController extends BaseController {
         
         return View::make('users.edit', ['user' => $user]);
     }
-    public function update()
+    public function update($user)
     {
-	DB::table('users')->where('Username', 'test')->update(array('Password' => '4343'));
-	return Redirect::to("/");
+	DB::table('users')->where('UserName', 'test')->update(array('Password' => '4343'));
+	return Redirect::to("/users/{$user->UserName}");
     }
 }

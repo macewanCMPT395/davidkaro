@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-{{ Form::open(['route' => "users.update"]) }}
+{{ Form::open(['method' =>'put', 'route' => "users.update"]) }}
 <div class="profile">
         <ul>
             <li>

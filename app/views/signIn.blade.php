@@ -16,7 +16,7 @@
                         {{ Form::input('text','Username') }}
                         <br>
                         {{ Form::label('Password', 'Password: ') }}
-                        {{ Form::input('text','Password') }}
+                        {{ Form::input('password','Password') }}
                         <br>
                         {{ Form::submit('Sign In') }}
                     </div>
