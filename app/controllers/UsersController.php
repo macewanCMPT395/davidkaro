@@ -21,8 +21,8 @@ class UsersController extends BaseController {
 	return Redirect::to("/");
 	}
         $user = new User;
-        $user->UserName = Input::get('Username');
-        $user->Password = Hash::make(Input::get('Password'));
+        $user->username = Input::get('Username');
+        $user->password = Hash::make(Input::get('Password'));
         $user->Gender = Input::get('Gender');
         $user->SexualOrientation = Input::get('LookingFor');
         $user->FurColor = Input::get('FurColor');
@@ -32,7 +32,7 @@ class UsersController extends BaseController {
         $user->save();
 
         
-        return Redirect::to("/users/{$user->UserName}");
+        return Redirect::to("/users/{$user->username}");
 	}  
     
     public function validate()
@@ -67,7 +67,7 @@ class UsersController extends BaseController {
     }
     public function update($user)
     {
-	DB::table('users')->where('UserName', 'test')->update(array('Password' => '4343'));
-	return Redirect::to("/users/{$user->UserName}");
+	DB::table('users')->where('UserName', $user)->update(array('Password' => '2222'));
+	return dd($user);
     }
 }

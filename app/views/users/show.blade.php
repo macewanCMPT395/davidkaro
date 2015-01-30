@@ -3,7 +3,7 @@
 @section('menu')
         
         <li>
-            {{ link_to("/users/{$user->UserName}/edit", "Edit Profile") }}
+            {{ link_to("/users/{$user->username}/edit", "Edit Profile") }}
         </li>
         
         <li>
@@ -52,7 +52,7 @@ $users = User::all();
                 </svg> 
             </li>
             <li>
-                <div class="user-name">{{$u->UserName}}</div>
+                <div class="user-name">{{$u->username}}</div>
                 <div class="user-info">
                     <ul>
                         <li>

@@ -3,7 +3,7 @@
 @section('menu')
         
         <li>
-            {{ link_to("/users/{$user->UserName}", "Peruse Llamas") }}
+            {{ link_to("/users/{$user->username}", "Peruse Llamas") }}
         </li>
         
         <li>
@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-{{ Form::open(['method' =>'put', 'route' => "users.update"]) }}
+{{ Form::open(['method' =>'put', 'route' => "users.update",'action' => ['UsersController@update',$user]]) }}
 <div class="profile">
         <ul>
             <li>
@@ -21,17 +21,17 @@
                 </svg> 
             </li>
             <li>
-                <div class="user-name">{{$user->UserName}}</div>
+                <div class="user-name">{{$user->username}}</div>
                 <div class="edit-info">
                     <ul>
                         <li>
                     <div id="textareasOut">
                     <div id="textareasIn">
                         {{ Form::label('username', 'Username: ') }}
-                        {{ Form::text('username', $user->UserName) }}
+                        {{ Form::text('username', $user->username) }}
                         <br>
                         {{ Form::label('password', 'Password: ') }}
-                        {{ Form::text('password', $user->Password) }}
+                        {{ Form::text('password', '') }}
                         <br>
                         {{ Form::label('password', 'Gender: ') }}
                         {{ Form::select('Gender',['Male', 'Female', 'TransLlama', 'NonGendered'], $user->Gender) }}
