@@ -39,7 +39,7 @@ class UsersController extends BaseController {
     {
         $username = Input::get('Username');
         $password = Input::get('Password');
-        if (Auth::attempt(array('UserName' => $username, 'Password' => $password) ))
+        if (Auth::attempt(array('username' => $username, 'password' => $password) ))
 	{
         return Redirect::to("/users/{$username}");
 	}
