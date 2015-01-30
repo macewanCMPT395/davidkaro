@@ -15,7 +15,7 @@ class UsersController extends BaseController {
     
 	public function store()
 	{
-        //Create New User
+              //Create New User
         $user = new User;
         $user->UserName = Input::get('Username');
         $user->Password = Hash::make(Input::get('Password'));
@@ -26,21 +26,23 @@ class UsersController extends BaseController {
         $user->Interests = Input::get('Interests');
         $user->Email = Input::get('Email');
         $user->save();
+
         
-        $username = $user->UserName;
-        
-        return Redirect::to("/users/{$username}");
+        return Redirect::to("/users/{$user->UserName}");
 	}  
     
     public function validate()
     {
         $user = new User;
         $user->UserName = Input::get('Username');
-        $user->Password = Hash::make(Input::get('Password'));
+        $user->Password = Input::get('Password');
         
         $username = $user->UserName;
-        
+        if (Auth::attempt(Input::only('Username','Password')))
+	{
         return Redirect::to("/users/{$username}");
+	}
+	return Redirect::to("/users/{$username}");
     }
     
     public function show($username)
@@ -61,5 +63,10 @@ class UsersController extends BaseController {
         $user = User::whereUsername($username)->first();
         
         return View::make('users.edit', ['user' => $user]);
+    }
+    public function update()
+    {
+	DB::table('users')->where('Username', 'test')->update(array('Password' => '4343'));
+	return Redirect::to("/");
     }
 }
