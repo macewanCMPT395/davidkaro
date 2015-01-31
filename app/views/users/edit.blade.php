@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-{{ Form::open(['method' =>'put', 'route' => "users.update",'action' => ['UsersController@update',$user]]) }}
+{{ Form::open(['method' =>'put', 'route' => "users.update"]) }}
 <div class="profile">
         <ul>
             <li>

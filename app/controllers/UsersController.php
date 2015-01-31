@@ -65,9 +65,17 @@ class UsersController extends BaseController {
         
         return View::make('users.edit', ['user' => $user]);
     }
-    public function update($user)
+    public function update()
     {
-	DB::table('users')->where('UserName', $user)->update(array('Password' => '2222'));
-	return dd($user);
+	$username = Input::get('username');
+	$password = Hash::make(Input::get('password'));
+	$gender = Input::get('Gender');
+	$sexualorientation = Input::get('SexualOrientation');
+	$furcolor = Input::get('FurColor');
+	$type = Input::get('Type');
+	$interests = Input::get('Interests');
+	$email = Input::get('Email');
+	DB::table('users')->where('UserName', $username)->update(array('Password' => $password, 'Gender' => $gender, 'SexualOrientation' => $sexualorientation, 'FurColor' => $furcolor, 'Type' => $type, 'Interests' => $interests, 'Email' => $email));
+	return Redirect::back();
     }
 }
