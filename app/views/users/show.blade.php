@@ -47,9 +47,7 @@ $users = User::all();
         
         <ul>
             <li>
-                <svg width="160" height="160">
-                    <rect class="pic" x="5" y="5" width="150" height="150" />
-                </svg> 
+                {{ HTML::image('images/bhipster.jpg', 'profile pic',array('class' => 'pic')) }}
             </li>
             <li>
                 <div class="user-name">{{$u->username}}</div>
