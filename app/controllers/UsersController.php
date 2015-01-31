@@ -15,11 +15,13 @@ class UsersController extends BaseController {
     
 	public function store()
 	{
-              //Create New User
-	if (DB::table('users')->where('UserName', Input::get('Username'))->pluck('name'))
+        $validator = Validator::make(Input::all(), ['username' => 'required','password' => 'required']);
+
+	if ($validator->fails() || DB::table('users')->where('UserName', Input::get('Username'))->pluck('name'))
 	{
-	return Redirect::to("/");
+	return Redirect::back()->withErrors($validator->messages());
 	}
+	//Create new user
         $user = new User;
         $user->username = Input::get('Username');
         $user->password = Hash::make(Input::get('Password'));

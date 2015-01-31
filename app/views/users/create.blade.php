@@ -13,7 +13,7 @@
                     <div id="textareasOut">
                     <div id="textareasIn">
                         {{ Form::label('Username', 'Username: ') }}
-                        {{ Form::text('Username') }}
+                        {{ Form::text('Username',$errors->first('username'),array('class' => $errors->has('username' ? 'error' : ''))) }}
                         <br>
                         {{ Form::label('Password', 'Password: ') }}
                         {{ Form::password('Password') }}
