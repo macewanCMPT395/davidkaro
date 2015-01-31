@@ -17,7 +17,7 @@ class UsersController extends BaseController {
 	{
         $validator = Validator::make(Input::all(), ['username' => 'required','password' => 'required']);
 
-	if ($validator->fails() || DB::table('users')->where('UserName', Input::get('Username'))->pluck('name'))
+	if (! $validator->fails() || DB::table('users')->where('UserName', Input::get('Username'))->pluck('name'))
 	{
 	return Redirect::back()->withErrors($validator->messages());
 	}
