@@ -25,6 +25,9 @@
                         <li>
                     <div id="textareasOut">
                     <div id="textareasIn">
+                        {{ Form::label('username', 'Username: ') }}
+                        {{ Form::text('username', $user->username) }}
+                        <br>
                         {{ Form::label('password', 'Password: ') }}
                         {{ Form::text('password', '') }}
                         <br>
